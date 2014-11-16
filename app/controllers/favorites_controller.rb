@@ -1,10 +1,16 @@
 class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all
+    @users = User.all
+    @dishes = Dish.all
+    @venues = Venue.all
   end
 
   def show
     @favorite = Favorite.find(params[:id])
+    @user = User.find_by("id" => @favorite.user_id).username
+    @dish = Dish.find(@favorite.dish_id).name
+    @venue = Venue.find(@favorite.venue_id).name
   end
 
   def new

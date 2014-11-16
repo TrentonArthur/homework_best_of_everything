@@ -1,9 +1,24 @@
 <div class="page-header">
-  <h1>User #<%= @user.id %></h1>
+  <h1>User #<%= @user.id %> - <%= @user.username %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Username</dt>
-  <dd><%= @user.username %></dd>
 
-</dl>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Favorite dishes</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <% @userFaves.each do |fave| %>
+    <tr>
+      <td><%= @dishes.find(fave.dish_id).name %></td>
+    </tr>
+
+
+  <% end %>
+  </tbody>
+

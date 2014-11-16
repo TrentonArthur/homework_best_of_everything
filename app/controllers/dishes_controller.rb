@@ -1,10 +1,12 @@
 class DishesController < ApplicationController
   def index
     @dishes = Dish.all
+    @cuisines = Cuisine.all
   end
 
   def show
     @dish = Dish.find(params[:id])
+    @cuisine = Cuisine.find(@dish.cuisine_id).name
   end
 
   def new_form

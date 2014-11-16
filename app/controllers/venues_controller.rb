@@ -4,11 +4,12 @@ require 'json'
 class VenuesController < ApplicationController
   def index
     @venues = Venue.all
+    @neighborhoods = Neighborhood.all
   end
 
   def show
     @venue = Venue.find(params[:id])
-
+    @neighborhood = Neighborhood.find(@venue.neighborhood_id).name
     url_safe_address = URI.encode(@venue.address)
     url_of_data = "http://maps.googleapis.com/maps/api/geocode/json?address=#{url_safe_address}"
     raw_data = open(url_of_data).read
