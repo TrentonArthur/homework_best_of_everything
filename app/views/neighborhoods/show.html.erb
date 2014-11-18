@@ -10,3 +10,22 @@
   <dd><%= @neighborhood.city %></dd>
 
 </dl>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Venues in this neighorhood</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+
+  <% @venues.each do |venue| %>
+    <tr>
+      <td><%= venue.name %></td>
+    </tr>
+
+
+  <% end %>
+  </tbody>

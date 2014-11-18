@@ -5,7 +5,8 @@ class NeighborhoodsController < ApplicationController
 
   def show
     @neighborhood = Neighborhood.find(params[:id])
-    @venues = Venue.all
+    @venues = Venue.where("neighborhood_id" => @neighborhood.id)
+
   end
 
   def new_form

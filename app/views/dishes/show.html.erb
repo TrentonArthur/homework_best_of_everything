@@ -10,3 +10,26 @@
   <dd><%= @cuisine %></dd>
 
 </dl>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>These are the users who favor these dishes</th>
+      <th>These are the venues wheres they like these dishes from</th>
+    </tr>
+
+
+  </thead>
+
+  <tbody>
+
+  <% @favorites.each do |fave| %>
+    <tr>
+      <td><%= @users.find(fave.user_id).username %></td>
+      <td><%= @venues.find(fave.venue_id).name %></td>
+    </tr>
+
+
+  <% end %>
+  </tbody>
+

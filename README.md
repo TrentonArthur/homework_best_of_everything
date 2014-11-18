@@ -75,9 +75,9 @@ Now, the interesting part. The core user story in this app is: I should be able 
 
 Also,
 
- - display a list of venues located in a neighborhood on the neighborhoods#show page (print names)
- - display a list of favorites on the dishes#show page (print venue names and usernames)
- - display a list of favorites on the venues#show page (print dish names and usernames)
+ - XX display a list of venues located in a neighborhood on the neighborhoods#show page (print names)
+ - XX   display a list of favorites on the dishes#show page (print venue names and usernames)
+ - XX    display a list of favorites on the venues#show page (print dish names and usernames)
 
 ## Part 3
 

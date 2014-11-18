@@ -7,8 +7,10 @@
   <thead>
     <tr>
       <th>Favorite dishes</th>
-
+      <th>Favorite venues</th>
     </tr>
+
+
   </thead>
 
   <tbody>
@@ -16,6 +18,7 @@
   <% @userFaves.each do |fave| %>
     <tr>
       <td><%= @dishes.find(fave.dish_id).name %></td>
+      <td><%= @venues.find(fave.dish_id).name %></td>
     </tr>
 
 

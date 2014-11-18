@@ -50,4 +50,26 @@
   </dd>
 </dl>
 
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Users with Favorites from this restaraunt</th>
+      <th>The users favorite dishes</th>
+    </tr>
+
+
+  </thead>
+
+  <tbody>
+
+  <% @favorites.each do |fave| %>
+    <tr>
+      <td><%= @users.find(fave.user_id).username %></td>
+      <td><%= @dishes.find(fave.dish_id).name %></td>
+    </tr>
+
+
+  <% end %>
+  </tbody>
+
 
